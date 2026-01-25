@@ -16,6 +16,7 @@ public:
 	static inline auto GetEventID = (const char*(__thiscall*)(GRaceParameters*))0x613590;
 	static inline auto GetNumOpponents = (int(__thiscall*)(GRaceParameters*))0x63C660;
 	static inline auto GetPlayerCarType = (const char*(__thiscall*)(GRaceParameters*))0x63E990;
+	static inline auto GetPlayerCarTypeHash = (uint32_t(__thiscall*)(GRaceParameters*))0x63F4B0;
 	static inline auto GetPlayerCarPerformance = (float(__thiscall*)(GRaceParameters*))0x63E9E0;
 	static inline auto GetUsePresetRide = (bool(__thiscall*)(GRaceParameters*))0x63E660;
 	static inline auto GetIsChallengeSeriesRace = (bool(__thiscall*)(GRaceParameters*))0x63E540;
