@@ -10,4 +10,4 @@ public:
 };
 auto& PresetCarList = *(bList<PresetCar>*)0xB77004;
 
-auto FindFEPresetCar = (PresetCar*(__cdecl*)(uint32_t))0x7C3050;
+auto FindFEPresetCar = (PresetCar*(*)(uint32_t))0x7C3050;
