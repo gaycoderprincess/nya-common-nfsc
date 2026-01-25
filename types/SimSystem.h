@@ -19,6 +19,7 @@ namespace Sim {
 	};*/
 
 	//auto SetStream = (void(*)(const UMath::Vector3* location, bool blocking))0x6F1170;
+	auto Exists = (bool(*)())0x75CDF0;
 	auto GetTime = (float(*)())0x75CF60;
 	auto GetState = (State(*)())0x75CE00;
 }
