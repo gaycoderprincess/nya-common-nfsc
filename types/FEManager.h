@@ -14,5 +14,5 @@ public:
 
 	static inline auto& mInstance = *(FEManager**)0xA97A7C;
 
-	static inline auto GetUserProfile = (UserProfile*(__stdcall*)(FEManager*, int))0x572B90;
+	static inline auto GetUserProfile = (UserProfile*(__thiscall*)(FEManager*, int))0x572B90;
 };

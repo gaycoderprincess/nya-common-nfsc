@@ -9,7 +9,7 @@ enum eVehicleList {
 	VEHICLE_REMOTE = 7,
 	VEHICLE_INACTIVE = 8,
 	VEHICLE_TRAILERS = 9,
-	VEHICLE_MAX = 10,
+	VEHICLE_MAX = 12, // todo there's 2 missing
 };
 
 enum DriverStyle {
@@ -74,6 +74,7 @@ public:
 	virtual void SetBehaviorOverride(UCrc32* mechanic, UCrc32* behavior) = 0;
 	virtual void RemoveBehaviorOverride(UCrc32* mechanic) = 0;
 	virtual void CommitBehaviorOverrides() = 0;
+	virtual void ReleaseBehaviorAudio() = 0;
 	virtual void SetStaging(bool staging) = 0;
 	virtual bool IsStaging() = 0;
 	virtual void Launch() = 0;
@@ -82,12 +83,16 @@ public:
 	virtual DriverStyle GetDriverStyle() = 0;
 	virtual void SetPhysicsMode(PhysicsMode mode) = 0;
 	virtual PhysicsMode GetPhysicsMode() = 0;
+	virtual void SetDraftZoneModifier(float modifier) = 0;
+	virtual float GetDraftZoneModifier() = 0;
 	virtual CarType GetModelType() = 0;
 	virtual bool IsSpooled() = 0;
+	virtual bool IsLowRez() = 0;
 	virtual const UCrc32* GetVehicleClass() = 0;
 	virtual const Attrib::Instance* GetVehicleAttributes() = 0;
 	virtual const char* GetVehicleName() = 0;
 	virtual uint32_t GetVehicleKey() = 0;
+	virtual uint32_t GetStockVehicleKey() = 0;
 	virtual void SetDriverClass(DriverClass new_class) = 0;
 	virtual DriverClass GetDriverClass() = 0;
 	virtual bool IsLoading() = 0;
@@ -122,7 +127,10 @@ public:
 	virtual void SetTunings(const Physics::Tunings* tunings) = 0;
 	virtual bool GetPerformance(Physics::Info::Performance *performance) = 0;
 	virtual const char* GetCacheName() = 0;
+	virtual bool GetDynamicData(const EventSequencer::System *system, EventSys::DynamicData *data) = 0;
+	virtual void* GetDraftState() = 0;
+	virtual void* _GetDraftState() = 0;
 };
 
-#define VEHICLE_LIST UTL::ListableSet<IVehicle, 20, eVehicleList, VEHICLE_MAX, 0x92CD18>
-static_assert(sizeof(VEHICLE_LIST::_buckets[0]) == 0x60);
+#define VEHICLE_LIST UTL::ListableSet<IVehicle, 30, eVehicleList, VEHICLE_MAX, 0xA9F158>
+static_assert(sizeof(VEHICLE_LIST::_buckets[0]) == 0x88);

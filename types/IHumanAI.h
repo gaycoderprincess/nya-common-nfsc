@@ -2,7 +2,6 @@ class IHumanAI : public UCOM::IUnknown {
 public:
 	static inline uint32_t IHandle = 0x4087C0;
 
-	virtual void ChangeDragLanes(bool) = 0;
 	virtual bool IsPlayerSteering() = 0;
 	virtual bool GetAiControl() = 0;
 	virtual void SetAiControl(bool ai_control) = 0;

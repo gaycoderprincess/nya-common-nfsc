@@ -31,7 +31,7 @@ enum ShiftPotential {
 
 class ITransmission : public UCOM::IUnknown {
 public:
-	static inline uint32_t IHandle = 0x404010;
+	static inline uint32_t IHandle = 0x403C80;
 
 	virtual GearID GetGear() = 0;
 	virtual GearID GetTopGear() = 0;

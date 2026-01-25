@@ -17,7 +17,16 @@ namespace Sim {
 class IRigidBody;
 class IModel;
 class WWorldPos;
-class EventSequencer;
+
+class EventSequencer {
+public:
+	class System;
+};
+
+class EventSys {
+public:
+	class DynamicData;
+};
 
 class ISimable : public UCOM::IUnknown {
 public:
