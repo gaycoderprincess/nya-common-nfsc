@@ -47,9 +47,16 @@ class eView;
 #include "types/StringRecord.h"
 #include "types/FeGarageMain.h"
 
+class DriftScoreReport {
+public:
+	uint8_t _0[0xC];
+	int totalPoints;
+};
+
 class DALRacer {
 public:
 	static inline auto GetRaceTime = (bool(__stdcall*)(float*, GRacerInfo*))0x4CEBA0;
+	static inline auto GetDriftScoreReport = (DriftScoreReport*(__thiscall*)(DALRacer*, int))0x4A6890;
 };
 
 class DALPauseStates {
