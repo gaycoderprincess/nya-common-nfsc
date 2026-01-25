@@ -14,6 +14,7 @@ class FECustomizationRecord;
 class VehicleCustomizations;
 class eView;
 
+#include "types/bNode.h"
 #include "types/UMath.h"
 #include "types/GameFlowManager.h"
 #include "types/UCOM.h"
@@ -37,12 +38,14 @@ class eView;
 #include "types/INIS.h"
 #include "types/GRaceParameters.h"
 #include "types/GRaceStatus.h"
+#include "types/PresetCar.h"
 #include "types/UserProfile.h"
 #include "types/FEManager.h"
 #include "types/ICopMgr.h"
 #include "types/SimSystem.h"
 #include "types/PVehicle.h"
 #include "types/StringRecord.h"
+#include "types/FeGarageMain.h"
 
 class DALRacer {
 public:
@@ -54,6 +57,7 @@ public:
 	static inline auto& mPauseRequest = *(uint32_t*)0xA8AD18;
 };
 
+auto FEHashUpper = (uint32_t(*)(const char*))0x5EA6A0;
 auto GetRacingResolution = (void(__stdcall*)(int*, int*))0x712AC0; // technically a thiscall but ecx is never used!
 
 auto& UnlockAllThings = *(bool*)0xA9E6C0;

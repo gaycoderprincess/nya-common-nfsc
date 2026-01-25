@@ -26,3 +26,10 @@ public:
 	static inline auto IsCrewRace = (bool(__thiscall*)(GRaceStatus*))0x61BA70;
 };
 static_assert(sizeof(GRaceStatus) == 0x6A20);
+
+class GRaceDatabase {
+public:
+	static inline auto& mObj = *(GRaceDatabase**)0xA9828C;
+
+	static inline auto GetRaceFromHash = (GRaceParameters*(__thiscall*)(GRaceDatabase*, uint32_t))0x61BEF0;
+};
