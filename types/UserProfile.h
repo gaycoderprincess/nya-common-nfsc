@@ -1,6 +1,5 @@
 class UserProfile {
 public:
-	char m_aProfileName[32];
-	bool m_bNamed;
+	uint8_t _0[0x10];
+	char mName[32]; // +10
 };
-//static_assert(sizeof(UserProfile) == 0x414+sizeof(FEPlayerCarDB));

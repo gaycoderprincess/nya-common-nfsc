@@ -30,6 +30,7 @@ class eView;
 #include "types/IRBVehicle.h"
 #include "types/IInput.h"
 #include "types/IHumanAI.h"
+#include "types/IVehicleCache.h"
 #include "types/INIS.h"
 #include "types/GRaceParameters.h"
 #include "types/GRaceStatus.h"
@@ -39,6 +40,11 @@ class eView;
 #include "types/SimSystem.h"
 #include "types/PVehicle.h"
 #include "types/StringRecord.h"
+
+class DALRacer {
+public:
+	static inline auto GetRaceTime = (bool(__stdcall*)(float*, GRacerInfo*))0x4CEBA0;
+};
 
 class DALPauseStates {
 public:
