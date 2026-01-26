@@ -74,6 +74,7 @@ public:
 
 auto FEHashUpper = (uint32_t(*)(const char*))0x5EA6A0;
 auto bStringHashUpper = (uint32_t(*)(const char*))0x4710B0;
+auto bInitTicker = (void(*)(float))0x46CE30;
 auto GetRacingResolution = (void(__stdcall*)(int*, int*))0x712AC0; // technically a thiscall but ecx is never used!
 
 auto& UnlockAllThings = *(bool*)0xA9E6C0;
