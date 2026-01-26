@@ -62,6 +62,7 @@ class DALRacer {
 public:
 	static inline auto GetName = (bool(__thiscall*)(DALRacer*, char*, int, int))0x4CB1A0;
 	static inline auto GetRaceTime = (bool(__thiscall*)(DALRacer*, float*, GRacerInfo*))0x4CEBA0;
+	static inline auto GetRacerPosition = (bool*(__thiscall*)(DALRacer*, int*, int))0x4CAFC0;
 	static inline auto GetRacerInfo = (GRacerInfo*(__thiscall*)(DALRacer*, int))0x4CA220;
 	static inline auto GetDriftScoreReport = (DriftScoreReport*(__thiscall*)(DALRacer*, int))0x4A6890;
 };
