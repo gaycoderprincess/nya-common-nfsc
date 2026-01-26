@@ -33,11 +33,11 @@ namespace Attrib {
 		Instance() {}
 
 		Instance(const Collection* collection, uint32_t msgPort, void* pInterface) {
-			((Instance*(__thiscall*)(Instance*, const Collection*, uint32_t, void*))0x6C25B0)(this, collection, msgPort, pInterface);
+			((Instance*(__thiscall*)(Instance*, const Collection*, uint32_t, void*))0x461340)(this, collection, msgPort, pInterface);
 		}
-		~Instance() {
-			((void(__thiscall*)(Instance*))0x469870)(this);
-		}
+		//~Instance() {
+		//	((void(__thiscall*)(Instance*))0x469870)(this);
+		//}
 
 		static inline auto GetAttributePointer = (void*(__thiscall*)(Instance*, uint32_t attributeKey, uint32_t index))0x463A80;
 		static inline auto GetCollection = (uint32_t(__thiscall*)(Instance*))0x4613E0;
