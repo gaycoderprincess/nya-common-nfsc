@@ -79,6 +79,9 @@ auto GetRacingResolution = (void(__stdcall*)(int*, int*))0x712AC0; // technicall
 
 auto& UnlockAllThings = *(bool*)0xA9E6C0;
 
+auto& AugmentedDriftWithEBrake = *(bool*)0xA9E65B;
+auto& Tweak_DriftRaceCollisionThreshold = *(float*)0xA62F10;
+
 auto& GameWindow = *(HWND*)0xAB0AD8;
 
 #include "nfschooks.h"

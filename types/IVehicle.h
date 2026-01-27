@@ -15,6 +15,7 @@ enum eVehicleList {
 enum DriverStyle {
 	STYLE_RACING = 0,
 	STYLE_DRAG = 1,
+	STYLE_DRIFT = 2,
 };
 
 enum PhysicsMode {
