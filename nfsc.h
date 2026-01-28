@@ -77,6 +77,12 @@ auto bStringHashUpper = (uint32_t(*)(const char*))0x4710B0;
 auto bInitTicker = (void(*)(float))0x46CE30;
 auto GetRacingResolution = (void(__stdcall*)(int*, int*))0x712AC0; // technically a thiscall but ecx is never used!
 
+auto LZCompress = (uint32_t(*)(uint8_t *pSrc, uint32_t sourceSize, uint8_t *pDst))0x6AA910;
+auto LZDecompress = (uint32_t(*)(uint8_t* pSrc, uint8_t* pDst))0x69EDE0;
+auto JLZCompress = (uint32_t(*)(uint8_t *pSrc, uint32_t sourceSize, uint8_t *pDst))0x6AA5B0;
+auto JLZDecompress = (uint32_t(*)(uint8_t* pSrc, uint8_t* pDst))0x69C5D0;
+auto HUFFCompress = (uint32_t(*)(uint8_t *pSrc, uint32_t sourceSize, uint8_t *pDst))0x69EBB0;
+
 auto& UnlockAllThings = *(bool*)0xA9E6C0;
 
 auto& AugmentedDriftWithEBrake = *(bool*)0xA9E65B;
