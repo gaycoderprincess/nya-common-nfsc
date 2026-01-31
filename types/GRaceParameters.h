@@ -38,6 +38,7 @@ public:
 	static inline auto GetIsLoopingRace = (bool(__thiscall*)(GRaceParameters*))0x63E2A0;
 	static inline auto GetIsPursuitRace = (bool(__thiscall*)(GRaceParameters*))0x63E240;
 	static inline auto GetIsDDayRace = (bool(__thiscall*)(GRaceParameters*))0x63E0C0;
+	static inline auto GetIsBossRace = (bool(__thiscall*)(GRaceParameters*))0x63E120;
 	static inline auto GetIsTutorialRace = (bool(__thiscall*)(GRaceParameters*))0x63E180;
 	static inline auto GetEventID = (const char*(__thiscall*)(GRaceParameters*))0x613590;
 	static inline auto GetNumOpponents = (int(__thiscall*)(GRaceParameters*))0x63C660;

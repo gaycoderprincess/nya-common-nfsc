@@ -32,4 +32,5 @@ public:
 	static inline auto& mObj = *(GRaceDatabase**)0xA9828C;
 
 	static inline auto GetRaceFromHash = (GRaceParameters*(__thiscall*)(GRaceDatabase*, uint32_t))0x61BEF0;
+	static inline auto GetStartupRace = (GRaceParameters*(__thiscall*)(GRaceDatabase*))0x613370;
 };
