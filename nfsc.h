@@ -67,6 +67,11 @@ public:
 	static inline auto GetDriftScoreReport = (DriftScoreReport*(__thiscall*)(DALRacer*, int))0x4A6890;
 };
 
+class DALOptions {
+public:
+	static inline auto SetJumpCamOn = (void(__thiscall*)(DALOptions*, int))0x4A4F60;
+};
+
 class DALPauseStates {
 public:
 	static inline auto& mPauseRequest = *(uint32_t*)0xA8AD18;
@@ -76,6 +81,7 @@ auto FEHashUpper = (uint32_t(*)(const char*))0x5EA6A0;
 auto bStringHashUpper = (uint32_t(*)(const char*))0x4710B0;
 auto bInitTicker = (void(*)(float))0x46CE30;
 auto GetRacingResolution = (void(__stdcall*)(int*, int*))0x712AC0; // technically a thiscall but ecx is never used!
+
 auto& gMoviePlayer = *(void**)0xA97BB4;
 
 auto LZCompress = (uint32_t(*)(uint8_t *pSrc, uint32_t sourceSize, uint8_t *pDst))0x6AA910;
