@@ -24,6 +24,7 @@ public:
 	static inline auto& fObj = *(GRaceStatus**)0xA98284;
 
 	static inline auto IsCrewRace = (bool(__thiscall*)(GRaceStatus*))0x61BA70;
+	static inline auto GetRacerInfo = (GRacerInfo*(__thiscall*)(GRaceStatus*, ISimable*))0x629670;
 };
 static_assert(sizeof(GRaceStatus) == 0x6A20);
 
