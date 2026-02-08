@@ -9,6 +9,8 @@ enum eVehicleList {
 	VEHICLE_REMOTE = 7,
 	VEHICLE_INACTIVE = 8,
 	VEHICLE_TRAILERS = 9,
+	VEHICLE_ACTIVERACERS = 10,
+	VEHICLE_GHOST = 11,
 	VEHICLE_MAX = 12, // todo there's 2 missing
 };
 
