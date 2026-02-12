@@ -95,6 +95,7 @@ auto& UnlockAllThings = *(bool*)0xA9E6C0;
 auto& AugmentedDriftWithEBrake = *(bool*)0xA9E65B;
 auto& Tweak_DriftRaceCollisionThreshold = *(float*)0xA62F10;
 
+auto& GameD3DDevice = *(IDirect3DDevice9**)0xAB0ABC;
 auto& GameWindow = *(HWND*)0xAB0AD8;
 
 #include "nfschooks.h"
