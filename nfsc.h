@@ -95,6 +95,10 @@ auto& UnlockAllThings = *(bool*)0xA9E6C0;
 
 auto& AugmentedDriftWithEBrake = *(bool*)0xA9E65B;
 auto& Tweak_DriftRaceCollisionThreshold = *(float*)0xA62F10;
+auto& Tweak_InfiniteRaceBreaker = *(bool*)0xB4D86C;
+auto& Tweak_GameBreakerRechargeTime = *(float*)0xA71270;
+auto& Tweak_GameBreakerRechargeSpeed = *(float*)0xA71274;
+auto& Tweak_GameBreakerCollisionMass = *(float*)0xA71278;
 
 auto& GameD3DDevice = *(IDirect3DDevice9**)0xAB0ABC;
 auto& GameWindow = *(HWND*)0xAB0AD8;
