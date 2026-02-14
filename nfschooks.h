@@ -116,4 +116,25 @@ namespace NyaHooks {
 			OrigFunction = (void(__thiscall*)(void*))NyaHookLib::PatchRelative(NyaHookLib::CALL, 0x67E3C3, &HookedFunction);
 		}
 	}
+
+	namespace SimQueueEventsHook {
+		std::vector<void(*)()> aPreFunctions;
+		std::vector<void(*)()> aPostFunctions;
+
+		auto OrigFunction = (void(*)(float))nullptr;
+		void HookedFunction(float a1) {
+			for (auto& func : aPreFunctions) {
+				func();
+			}
+			OrigFunction(a1);
+			for (auto& func : aPostFunctions) {
+				func();
+			}
+		}
+
+		void Init() {
+			if (OrigFunction) return;
+			OrigFunction = (void(*)(float))NyaHookLib::PatchRelative(NyaHookLib::CALL, 0x6B7A06, &HookedFunction);
+		}
+	}
 }

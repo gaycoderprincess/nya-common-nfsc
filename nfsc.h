@@ -32,6 +32,7 @@ class eView;
 #include "types/ITransmission.h"
 #include "types/IRigidBody.h"
 #include "types/IRBVehicle.h"
+#include "types/ISpikeable.h"
 #include "types/IInput.h"
 #include "types/IHumanAI.h"
 #include "types/IVehicleCache.h"
