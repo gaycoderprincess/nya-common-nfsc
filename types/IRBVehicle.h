@@ -13,6 +13,7 @@ public:
 	virtual void SetCollisionMass(float) = 0;
 	virtual void SetCollisionCOG(const UMath::Vector3*) = 0;
 	virtual void EnableObjectCollisions(bool) = 0;
+	virtual bool AreObjectCollisionsEnabled() = 0;
 	virtual void SetInvulnerability(eInvulnerablitiy, float) = 0;
 	virtual eInvulnerablitiy GetInvulnerability() = 0;
 	virtual void SetPlayerReactions(Attrib::Instance*) = 0;

@@ -23,8 +23,7 @@ public:
 	class System;
 };
 
-class EventSys {
-public:
+namespace EventSys {
 	class DynamicData;
 };
 

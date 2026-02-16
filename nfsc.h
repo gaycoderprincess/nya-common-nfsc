@@ -47,6 +47,7 @@ class eView;
 #include "types/PVehicle.h"
 #include "types/StringRecord.h"
 #include "types/FeGarageMain.h"
+#include "types/Event.h"
 
 class GStartGrid {
 public:

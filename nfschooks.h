@@ -100,6 +100,23 @@ namespace NyaHooks {
 		}
 	}
 
+	namespace WorldServiceHook {
+		std::vector<void(*)()> aFunctions;
+
+		auto OrigFunction = (void(*)())nullptr;
+		void HookedFunction() {
+			OrigFunction();
+			for (auto& func : aFunctions) {
+				func();
+			}
+		}
+
+		void Init() {
+			if (OrigFunction) return;
+			OrigFunction = (void(*)())NyaHookLib::PatchRelative(NyaHookLib::CALL, 0x6B7B3A, &HookedFunction);
+		}
+	}
+
 	namespace SimServiceHook {
 		std::vector<void(*)()> aFunctions;
 
