@@ -79,6 +79,20 @@ public:
 	static inline auto& mPauseRequest = *(uint32_t*)0xA8AD18;
 };
 
+class TableBase {
+public:
+	int NumEntries;
+	float MinArg;
+	float MaxArg;
+	float IndexMultiplier;
+};
+
+class Table : public TableBase {
+public:
+	const float* pTable;
+};
+auto LoadSensitivityTable = (Table**)0xA63554;
+
 auto FEHashUpper = (uint32_t(*)(const char*))0x5EA6A0;
 auto bStringHashUpper = (uint32_t(*)(const char*))0x4710B0;
 auto bInitTicker = (void(*)(float))0x46CE30;
