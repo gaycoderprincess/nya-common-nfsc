@@ -47,17 +47,12 @@ class eView;
 #include "types/PVehicle.h"
 #include "types/StringRecord.h"
 #include "types/FeGarageMain.h"
+#include "types/DriftScoring.h"
 #include "types/Event.h"
 
 class GStartGrid {
 public:
 	static inline auto GetGrid = (bool(*)(int index, UMath::Vector3* pos, UMath::Vector3* dir, void* startMarker))0x648510;
-};
-
-class DriftScoreReport {
-public:
-	uint8_t _0[0xC];
-	int totalPoints;
 };
 
 class DALRacer {
